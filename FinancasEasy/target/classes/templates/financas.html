@@ -1,0 +1,82 @@
+<html layout:decorate="~{master.html}">
+    <head>
+        <title>Finanças Easy ®</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Listagem de finanças</div>
+        
+        <h2 layout:fragment="titulo">
+            Minhas finanças
+        </h2>
+        
+        <section layout:fragment="conteudo" >
+            <div class="saldo alinhar-centro">
+                <h2 class="display-2">Saldo atual: R$<span th:text='${saldo}'>0,0</span>0</h2>
+            </div>
+            <div class="saldo alinhar-centro">
+                <p class="contador">Operações de entrada realizadas: <span th:text='${quantidadeEntradas}'>X</span> (Total de R$<span th:text='${valorEntradas}'>00,0</span>0)</p>
+                <p class="contador">Operações de saída realizadas: <span th:text='${quantidadeSaidas}'>Y</span> (Total de R$<span th:text='${valorSaidas}'>00,0</span>0)</p>
+            </div>
+            
+            <table id="tabela-historico" class="table table-bordered table-dark">
+                <thead>
+                    <tr>
+                        <th colspan="2"><h3 class="display-5">Histórico econômico</h3></th>
+                    </tr>
+                    <tr>
+                        <td>Mês</td>
+                        <td>Resultado</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="width: 15%">Janeiro</td>
+                        <td>
+                            <span class="texto-positivo">R$<span th:text='${quantiaPositJaneiro}'>00,0</span>0 em ganhos (<span th:text='${porcPositJaneiro}'>00</span>%)</span> | 
+                            <span class="texto-negativo">R$<span th:text='${quantiaNegatJaneiro}'>00,0</span>0 em gastos (<span th:text='${porcNegatJaneiro}'>00</span>%)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%">Fevereiro</td>
+                        <td>
+                            <span class="texto-positivo">R$<span th:text='${quantiaPositFevereiro}'>00,0</span>0 em ganhos (<span th:text='${porcPositFevereiro}'>00</span>%)</span> | 
+                            <span class="texto-negativo">R$<span th:text='${quantiaNegatFevereiro}'>00,0</span>0 em gastos (<span th:text='${porcNegatFevereiro}'>00</span>%)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%">Março</td>
+                        <td>
+                            <span class="texto-positivo">R$<span th:text='${quantiaPositMarco}'>00,0</span>0 em ganhos (<span th:text='${porcPositMarco}'>00</span>%)</span> | 
+                            <span class="texto-negativo">R$<span th:text='${quantiaNegatMarco}'>00,0</span>0 em gastos (<span th:text='${porcNegatMarco}'>00</span>%)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%">Abril</td>
+                        <td>
+                            <span class="texto-positivo">R$<span th:text='${quantiaPositAbril}'>00,0</span>0 em ganhos (<span th:text='${porcPositAbril}'>00</span>%)</span> | 
+                            <span class="texto-negativo">R$<span th:text='${quantiaNegatAbril}'>00,0</span>0 em gastos (<span th:text='${porcNegatAbril}'>00</span>%)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%">Maio</td>
+                        <td>
+                            <span class="texto-positivo">R$<span th:text='${quantiaPositMaio}'>00,0</span>0 em ganhos (<span th:text='${porcPositMaio}'>00</span>%)</span> | 
+                            <span class="texto-negativo">R$<span th:text='${quantiaNegatMaio}'>00,0</span>0 em gastos (<span th:text='${porcNegatMaio}'>00</span>%)</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="width: 15%">Junho</td>
+                        <td>
+                            <span class="texto-positivo">R$<span th:text='${quantiaPositJunho}'>00,0</span>0 em ganhos (<span th:text='${porcPositJunho}'>00</span>%)</span> | 
+                            <span class="texto-negativo">R$<span th:text='${quantiaNegatJunho}'>00,0</span>0 em gastos (<span th:text='${porcNegatJunho}'>00</span>%)</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <script layout:fragment="script"></script>
+    </body>
+</html>

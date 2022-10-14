@@ -1,0 +1,44 @@
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Finanças Easy ®</title>
+	<link rel="icon" href="img/icone.png">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="/estilo/splash.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="background-image: url('/img/fundo.jpg'); background-position: center top; background-size: 100% auto; background-color:rgba(0, 0, 0, 0.5);">
+    <header class="cabecalho">
+        <a th:href="@{/home}"><img src="/img/logo.png" class="cab-logo"></a>
+        <h1 class="cab-titulo">Finanças Easy</h1>
+	<div class="cab-acoes">
+            <ul>
+                <li><a th:href="@{/home}">Início</a></li>
+                <li sec:authorize="hasRole('USER')">
+                    <div class="dropdown-box">
+			<button class="dropbtn">Navegar
+                            <i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+                            <a th:href="@{/financas/minhasFinancas}">Minhas finanças</a>
+                            <a th:href="@{/financas/registrarOperacao}">Registrar operação</a>
+                            <a th:href="@{/financas/registrarCategoria}">Cadastrar categoria</a>
+                            <a th:href="@{/admin/relatorio}" sec:authorize="hasRole('ADMIN')">Gerar relatório</a>
+			</div>
+                    </div> 
+                </li>
+                <li style="float:right"><form th:action="@{/logout}" method="post"><button value="Sair" type="submit" id="botao-logout">Sair</button></form></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1 class="titulo-main" layout:fragment="titulo">Titulo</h1>
+        <section class="conteudo-main" layout:fragment="conteudo">
+            
+        </section>
+    </main>
+<th:block layout:fragment="script">
+    
+</th:block>
+</body>
+</html>

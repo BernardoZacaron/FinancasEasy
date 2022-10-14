@@ -1,0 +1,40 @@
+<html layout:decorate="~{master.html}">
+    <head>
+        <title>Finanças Easy ®</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Cadastro de categorias</div>
+        
+        <h2 layout:fragment="titulo">
+            Cadastro de categorias
+        </h2>
+        
+        <section layout:fragment="conteudo" >
+            <form th:action="@{/financas/saveCategoria}" method="post" th:object="${novoCategoria}">
+                <div class="form-group">
+                    <label for="cpTitulo"><b>Título</b></label>
+                    <input type="text" name="cpTitulo" class="form-control" required th:field="*{titulo}">
+                    <br>
+                    <label for="cpDescricao"><b>Descrição</b></label>
+                    <textarea name="cpDescricao" class="form-control" required th:field="*{descricao}"></textarea>
+                    <br>
+                    <label>Ação de: </label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="radioAcao" id="cpEntrada" value="true" th:field="*{acao}">
+                        <label class="form-check-label" for="cpEntrada">Entrada</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="radioAcao" value="false" id="cpSaida" th:field="*{acao}">
+                        <label class="form-check-label" for="cpSaida">Saída</label>
+                    </div>
+                    <br><br>
+                    <div class="alinhar-centro"><button type="submit" class="btn-lg btn-primary">Registrar</button></div>
+                </div>
+            </form>
+        </section>
+        
+        <script layout:fragment="script"></script>
+    </body>
+</html>

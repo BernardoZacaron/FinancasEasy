@@ -1,0 +1,14 @@
+com\example\seguranca\UserService.class
+com\example\dao\UsuarioDAO.class
+com\example\BasicApplication.class
+com\example\dao\CategoriaDAO.class
+com\example\model\dto\LoginDTO.class
+com\example\dao\OperacaoDAO.class
+com\example\seguranca\WebSecurity.class
+com\example\controle\Control.class
+com\example\model\dto\OperacaoCreateDTO.class
+com\example\model\Operacao.class
+com\example\model\Categoria.class
+com\example\controle\ControlFinancas.class
+com\example\seguranca\UserLogado.class
+com\example\model\Usuario.class

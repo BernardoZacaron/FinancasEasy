@@ -1,0 +1,30 @@
+<html layout:decorate="~{master.html}">
+    <head>
+        <title>Finanças Easy ®</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Página HOME</div>
+        
+        <h2 layout:fragment="titulo">
+            Página inicial
+        </h2>
+        
+        <section layout:fragment="conteudo" >
+            <div class="conteudo-home">
+                <h3>Seja bem-vindo ao <b>Finanças Easy</b>!</h3>
+                <p>O nosso objetivo aqui é ajudá-lo a buscar este equilíbrio na sua vida financeira. 
+                    Não desista, mas também não espere soluções rápidas ou milagrosas. 
+                    Dê um passo a cada dia. Pode não parecer, 
+                    mas no longo prazo você vai se surpreender com os resultados!</p>
+                <p>Te oferecemos dados, tabelas e relatórios para te auxiliar com o gerenciamento de suas economias.</p>
+            </div>
+            <div class="alinhar-centro">
+                <img src="img/pig.jpg" width="40%"/>
+            </div>
+        </section>
+        
+        <script layout:fragment="script"></script>
+    </body>
+</html>
