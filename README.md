@@ -1,14 +1,23 @@
 # FinancasEasy
 Sistema Java Web feito com Spring que registra e gera relatórios financeiros para o usuário.
 
+
 Usuários salvos por padrão:
+
   usuário normal
+  
   login: denis
+  
   senha: 123
   
+  -------------
+  
   usuário administrador
+  
   login: adm
+  
   senha: 123
+  
   
   
 Esse sistema foi desenvolvido por mim para o trabalho final do último semestre do meu curso em Análise e Desenvolvimento de Sistemas.
